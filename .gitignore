@@ -480,3 +480,42 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+# ============================================
+# ASP.NET Core & HR Management Custom Rules
+# ============================================
+
+# Local & Environment Configuration
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.*.local.json
+appsettings.local.json
+.env.*
+!.env.example
+secrets.json
+
+# User Uploads & Media (HR Avatar, CV, Documents)
+wwwroot/uploads/
+wwwroot/files/
+uploads/
+storage/
+
+# SQLite & Local DB files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Log files & directories
+logs/
+*.log
+
+# Certificates & SSL keys
+*.pem
+*.cer
+*.crt
+*.key
+
+# JetBrains Rider user settings
+*.sln.DotSettings.user
