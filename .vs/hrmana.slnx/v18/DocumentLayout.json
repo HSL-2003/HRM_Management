@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\Migrations\\20260929045320_AddIdentityTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260929045320_AddIdentityTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.infrastructure\\db\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.infrastructure\\db\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.api\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.api\\controller\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.api\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.api\\controller\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\service\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\service\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.api\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.api\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\dtos\\updatedepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\dtos\\updatedepartmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\service\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\service\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|c:\\users\\itpc\\downloads\\hr_management\\hrmana\\hrmanagement.application\\dtos\\registdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919B76AE-E745-18D0-12A0-963E66384780}|hrmana.csproj|solutionrelative:hrmanagement.application\\dtos\\registdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,124 +46,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260929045320_AddIdentityTables.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\Migrations\\20260929045320_AddIdentityTables.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260929045320_AddIdentityTables.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\Migrations\\20260929045320_AddIdentityTables.cs",
-              "RelativeToolTip": "Migrations\\20260929045320_AddIdentityTables.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAARAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\AuthController.cs",
+              "RelativeDocumentMoniker": "HrManagement.API\\Controller\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\AuthController.cs",
+              "RelativeToolTip": "HrManagement.API\\Controller\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:53:21.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T03:44:38.88Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Infrastructure\\DB\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "HRManagement.Infrastructure\\DB\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Infrastructure\\DB\\AppDbContext.cs",
-              "RelativeToolTip": "HRManagement.Infrastructure\\DB\\AppDbContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBoAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "HrManagement.API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "HrManagement.API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:45:20.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T09:23:46.129Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Domain\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "HRManagement.Domain\\Entities\\AppUser.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Domain\\Entities\\AppUser.cs",
-              "RelativeToolTip": "HRManagement.Domain\\Entities\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:41:53.329Z",
-              "EditorCaption": ""
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-30T09:01:39.185Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateDepartmentDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\DTOs\\UpdateDepartmentDTO.cs",
-              "RelativeDocumentMoniker": "HRManagement.Application\\DTOs\\UpdateDepartmentDTO.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\DTOs\\UpdateDepartmentDTO.cs",
-              "RelativeToolTip": "HRManagement.Application\\DTOs\\UpdateDepartmentDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T04:04:58.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IDepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\IDepartmentService.cs",
-              "RelativeDocumentMoniker": "HRManagement.Application\\Service\\IDepartmentService.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\IDepartmentService.cs",
-              "RelativeToolTip": "HRManagement.Application\\Service\\IDepartmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T03:53:15.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "HrManagement.API\\Controller\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\EmployeeController.cs",
-              "RelativeToolTip": "HrManagement.API\\Controller\\EmployeeController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAIwBIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T09:29:38.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DepartmentService.cs",
-              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\DepartmentService.cs",
-              "RelativeDocumentMoniker": "HRManagement.Application\\Service\\DepartmentService.cs",
-              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\DepartmentService.cs",
-              "RelativeToolTip": "HRManagement.Application\\Service\\DepartmentService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAEgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T07:49:56.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T03:09:00.234Z",
+              "WhenOpened": "2026-09-30T04:08:21.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\DepartmentController.cs",
               "RelativeDocumentMoniker": "HrManagement.API\\Controller\\DepartmentController.cs",
               "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\DepartmentController.cs",
               "RelativeToolTip": "HrManagement.API\\Controller\\DepartmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T09:29:29.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-30T03:54:14.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegistDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\DTOs\\RegistDTO.cs",
+              "RelativeDocumentMoniker": "HRManagement.Application\\DTOs\\RegistDTO.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\DTOs\\RegistDTO.cs",
+              "RelativeToolTip": "HRManagement.Application\\DTOs\\RegistDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T03:49:57.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\IAuthService.cs",
+              "RelativeDocumentMoniker": "HRManagement.Application\\Service\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\IAuthService.cs",
+              "RelativeToolTip": "HRManagement.Application\\Service\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T03:50:35.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "HRManagement.Application\\Service\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HRManagement.Application\\Service\\AuthService.cs",
+              "RelativeToolTip": "HRManagement.Application\\Service\\AuthService.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwD0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T02:22:22.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "HrManagement.API\\Controller\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\ITPC\\Downloads\\HR_management\\hrmana\\HrManagement.API\\Controller\\EmployeeController.cs",
+              "RelativeToolTip": "HrManagement.API\\Controller\\EmployeeController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-28T09:29:38.449Z"
             }
           ]
         }

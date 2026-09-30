@@ -29,12 +29,12 @@ namespace Hrmanagement.HRManagement.Infrastructure.DB
                 entity.Property(e => e.Description).HasMaxLength(500);
 
                 entity.HasOne(e => e.Department)
-                      .WithMany(d => d.EmployeeInfos)      // ← trỏ đúng vào ICollection bên Department
+                      .WithMany(d => d.EmployeeInfos)      
                       .HasForeignKey(e => e.DepartmentId)
                       .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasOne(e => e.Position)
-                      .WithMany(p => p.EmployeeInfos)   // ← thêm đích danh, giống Department
+                      .WithMany(p => p.EmployeeInfos)    
                       .HasForeignKey(e => e.PositionId)
                       .OnDelete(DeleteBehavior.Restrict);
             });

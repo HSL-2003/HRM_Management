@@ -28,6 +28,7 @@ namespace hrmana.HrManagement.API.Middleware
             {
                 KeyNotFoundException => (StatusCodes.Status404NotFound,ex.Message),
                 ArgumentException => (StatusCodes.Status400BadRequest,ex.Message),
+                UnauthorizedAccessException => (StatusCodes.Status403Forbidden,ex.Message),
                 InvalidOperationException =>(StatusCodes.Status409Conflict,ex.Message),
                 _ => (StatusCodes.Status500InternalServerError,"System Error Cuzz")
             };
