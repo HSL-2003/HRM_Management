@@ -17,51 +17,14 @@ namespace hrmana.HrManagement.API.Controller
         [HttpGet]
         public async Task<IActionResult> GetAllEmployee()
         {
-            try
-            {
-                var employee = await _service.GetAllEmployeeAsync();
-                var dto = employee.Select(e => new EmployeeResponseDTO
-                {
-                    Id = e.Id,
-                    Name = e.Name,
-                    Age = e.Age,
-                    Phone = e.Phone,
-                    Address = e.Address,
-                    Description = e.Description,
-                    DepartmentName = e.Department.Name,
-                    PositionName = e.Position.Name,
-                    HiredDate = e.HiredDate
-                }).ToList();
-                return Ok(dto);
-            }
-            catch
-            {
-                return NotFound($"Nothing in DB cuz,crazy");
-            }
+           var e =  await _service.GetAllEmployeeAsync();
+            return Ok(BaseResponse<List<EmployeeResponseDTO>>.Ok(e, "Get All SuccessFully!"));
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEmpId(int id)
         {
-            try
-            {
-                var employee = await _service.GetEmployeeById(id);
-                var dto = new EmployeeResponseDTO
-                {
-                    Id = employee.Id,
-                    Name = employee.Name,
-                    Age = employee.Age,
-                    Address = employee.Address,
-                    Description = employee.Description,
-                    Phone = employee.Phone,
-                    DepartmentName = employee.Department.Name,
-                    PositionName = employee.Position.Name
-                };
-                return Ok(dto);
-            }
-            catch
-            {
-                return NotFound($"i can't see shit with id {id}");
-            }
+            var d = await _service.GetEmployeeById(id);
+            return Ok(BaseResponse<EmployeeResponseDTO>.Ok(d, $"Get Employee With ID : {id}"));
         }
         [HttpPost]
         public async Task<IActionResult> CreateEmployee([FromBody] EmployeeCreateDTO empdto)

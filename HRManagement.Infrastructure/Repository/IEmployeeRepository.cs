@@ -15,5 +15,6 @@ namespace Hrmanagement.HRManagement.Infrastructure.Repository
         Task<bool> ExistByPhone(string phone);
 
         Task Savechangeasync();
+        Task<(List<EmployeeInfo> Items, int TotalCount)> SearchEmployeeAsync(string? keyword,int? DepartmentId,int pageNumber,int pageSize);
     }
 }

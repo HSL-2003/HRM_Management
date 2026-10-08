@@ -1,4 +1,5 @@
-﻿using Hrmanagement.HRManagement.Domain.Entities;
+﻿using hrmana.HRManagement.Application.DTOs;
+using Hrmanagement.HRManagement.Domain.Entities;
 using Hrmanagement.HRManagement.Infrastructure.Repository;
 
 namespace Hrmanage.HRManagement.Application.Service
@@ -42,21 +43,69 @@ namespace Hrmanage.HRManagement.Application.Service
             }
         }
 
-        public async Task<List<EmployeeInfo>> GetAllEmployeeAsync()
+        public async Task<List<EmployeeResponseDTO>> GetAllEmployeeAsync()
         {
-            return await _iemp.GetAllEmployeeAsync();
+            var e = await _iemp.GetAllEmployeeAsync();
+            var list = e.Select(x => new EmployeeResponseDTO
+            {
+                Name = x.Name,
+                Age = x.Age,
+                Phone = x.Phone,
+                Address = x.Address,
+                Description = x.Description,
+                HiredDate = x.HiredDate,
+                DepartmentName = x.Department.Name,
+                PositionName = x.Position.Name,
+            }).ToList();
+            return list;
         }
 
-        public async Task<EmployeeInfo> GetEmployeeById(int id)
+        public async Task<EmployeeResponseDTO> GetEmployeeById(int id)
         {
             var i = await _iemp.GetEmployeeById(id);
-            if (i != null) {
-                return i;
-            }
-            else
+            if (i == null)
             {
-                throw new Exception("u gotta wrong cuzz");
+                throw new KeyNotFoundException($"Can't Find Shit With ID : {id}");
             }
+            var d = new EmployeeResponseDTO
+            {
+                Id = i.Id,
+                Name = i.Name,
+                Age = i.Age,
+                Address = i.Address,
+                Phone = i.Phone,
+                Description = i.Description,
+                HiredDate= i.HiredDate,
+                DepartmentName = i.Department.Name,
+                PositionName = i.Position.Name,
+            };
+            return d;
+        }
+
+        public async Task<PagedResult<EmployeeResponseDTO>> SearchEmployee(string? keyword, int? departmentId, int pageNumber, int pageSize)
+        {
+            if(pageNumber < 1) pageNumber = 1;
+            if(pageSize < 1) pageSize = 1;
+            if(pageSize > 50) pageSize = 50;
+            var (items,total) = await _iemp.SearchEmployeeAsync(keyword, departmentId, pageNumber, pageSize);
+            return new PagedResult<EmployeeResponseDTO>
+            {
+                Items = items.Select(x => new EmployeeResponseDTO
+                {
+                    Name = x.Name,
+                    Age = x.Age,
+                    Phone = x.Phone,
+                    Address = x.Address,
+                    Description = x.Description,
+                    DepartmentName = x.Department.Name,
+                    PositionName = x.Position.Name,
+                    HiredDate = x.HiredDate,
+                }).ToList(),
+                TotalCount = total,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalPages = (int)Math.Ceiling(total/(double)pageSize)
+            };
         }
 
         public async Task UpdateEmployeeAsync(EmployeeInfo employeeInfo)

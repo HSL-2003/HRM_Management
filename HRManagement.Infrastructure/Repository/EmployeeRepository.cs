@@ -44,5 +44,21 @@ namespace Hrmanagement.HRManagement.Infrastructure.Repository
             var emp = await _context.EmployeeInfos.FirstOrDefaultAsync(e => e.Phone == phone);
             return emp != null;
         }
+
+        public async Task<(List<EmployeeInfo> Items, int TotalCount)> SearchEmployeeAsync(string? keyword, int? DepartmentId, int pageNumber, int pageSize)
+        {
+            var query = _context.EmployeeInfos.Include(x => x.DepartmentId).Include(x => x.PositionId).AsNoTracking().AsQueryable();
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                query = query.Where(e => e.Name.Contains(keyword));
+            }
+            if (DepartmentId.HasValue)
+            {
+                query = query.Where(e => e.DepartmentId == DepartmentId.Value);
+            }
+            var totalcount = await query.CountAsync();
+            var item = await query.OrderBy(e => e.Id).Skip((pageNumber - 1)*pageSize).Take(pageSize).ToListAsync();
+            return (item, totalcount);
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace hrmana.HRManagement.Application.Service
             if (!roleresult.Succeeded)
             {
                 await _usermana.DeleteAsync(e);
-                throw new Exception("create successfully But not allow admin,created fail");
+                throw new InvalidOperationException("create successfully But not allow admin,created fail");
             }
 
         }
@@ -54,7 +54,7 @@ namespace hrmana.HRManagement.Application.Service
             return ad.Any();
         }
 
-        public async Task<string> LoginAdminAsync(LoginDTO ldto)
+        public async Task<string> LoginAsync(LoginDTO ldto)
         {
             var a = await _usermana.FindByEmailAsync(ldto.Email);
             if (a == null)
@@ -77,7 +77,32 @@ namespace hrmana.HRManagement.Application.Service
             var role = await _usermana.GetRolesAsync(a);
             return GenerateJwtToken(a,role);
 
+
         }
+
+        public async Task CreateUserOnRoleAsync(RegistDTO rdto, string role)
+        {
+            var e = new AppUser
+            {
+                FullName = rdto.FullName,
+                Email = rdto.Email,
+                UserName = rdto.Email,
+                PhoneNumber = rdto.PhoneNumber,
+            };
+            var cu = await _usermana.CreateAsync(e, rdto.Password);
+            if (!cu.Succeeded)
+            {
+                var error = cu.Errors.Select(x => x.Description).ToList();
+                throw new ArgumentException(string.Join(",",error));
+            }
+            var roleresult = await _usermana.AddToRoleAsync(e, role);
+            if (!roleresult.Succeeded)
+            {
+                var error = await _usermana.DeleteAsync(e);
+                throw new InvalidOperationException("Create SuccessFully But Atomicity");
+            }
+        }
+        
         private string GenerateJwtToken(AppUser user, IList<string> roles)
         {
             var claim = new List<Claim>
@@ -100,7 +125,96 @@ namespace hrmana.HRManagement.Application.Service
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-  
+
+        public async Task<List<UserResponseDTO>> GetAllUserAsync()
+        {
+            var e = _usermana.Users.ToList();
+            var d = new List<UserResponseDTO>();
+            foreach (var u in e)
+            {
+                var role = await _usermana.GetRolesAsync(u);
+                d.Add(new UserResponseDTO {
+
+                    Id = u.Id,
+                    UserName = u.UserName,
+                    FullName = u.FullName,
+                    Email = u.Email,
+                    PhoneNumber = u.PhoneNumber,
+                    Role = role.FirstOrDefault()
+
+                });
+            }
+            return d;
+            
         }
+        
+
+        public async Task<UserResponseDTO> GetUserByIdAsync(string id)
+        {
+            var e = await _usermana.FindByIdAsync(id);
+            if (e == null)
+            {
+                throw new KeyNotFoundException($"Can't Find Shit With id :{id}");
+            }
+            var d = await _usermana.GetRolesAsync(e);
+            return new UserResponseDTO
+            {
+                Id = e.Id,
+                Email = e.Email,
+                PhoneNumber = e.PhoneNumber,
+                FullName = e.FullName,
+                Role = d.FirstOrDefault()
+            };
+            
+        }
+
+        public async Task UpdateUserAsync(string id,UpdateUserDTO udto)
+        {
+            var e = await _usermana.FindByIdAsync(id);
+            if (e == null)
+            {
+                throw new KeyNotFoundException($"Can't Find Shit Cuz,This ID Not Event Exist : {id}");
+            }
+            else
+            {
+                e.FullName = udto.FullName;
+                e.PhoneNumber = udto.PhoneNumber;
+            }
+                
+            var udu = await _usermana.UpdateAsync(e);
+            if (!udu.Succeeded)
+            {
+                var error = udu.Errors.Select(x => x.Description).ToList();
+                throw new ArgumentException(string.Join(",", error));
+            }
+            
+            
+        }
+
+        public async Task DeleteUserAsync(string id)
+        {
+            var e = await _usermana.FindByIdAsync(id);
+            if (e == null)
+            {
+                throw new KeyNotFoundException($"Can't Find Shit Cuz,This ID Not Event Exist : {id}");
+            }
+            var crole = await _usermana.IsInRoleAsync(e, "Admin");
+            if (crole)
+            {
+                throw new InvalidOperationException("Can't Get In Here Cuz");
+            }
+            else
+            {
+                var result = await _usermana.DeleteAsync(e);
+                if (!result.Succeeded)
+                {
+
+                }
+            }
+            
+            
+
+        }
+    }
     }
 
