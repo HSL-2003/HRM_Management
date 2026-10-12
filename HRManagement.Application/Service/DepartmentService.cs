@@ -43,9 +43,9 @@ namespace hrmana.HRManagement.Application.Service
             return await _dpms.GetAllDepartmentsAsync();
         }
 
-        public Task<Department> GetDepartmentById(int id)
+        public async Task<Department> GetDepartmentById(int id)
         {
-            var d = _dpms.GetDepartmentByIdAsync(id);
+            var d = await _dpms.GetDepartmentByIdAsync(id);
             if (d == null)
             {
                 throw new Exception("Ain't got no department here sir");
@@ -63,7 +63,7 @@ namespace hrmana.HRManagement.Application.Service
             if (d != null)
             {
                 _dpms.UpdateDepartment(dpm);
-                _dpms.SaveChangesAsync();
+               await _dpms.SaveChangesAsync();
             }
             else
             {

@@ -13,15 +13,27 @@ namespace Hrmanage.HRManagement.Application.Service
         }
         public async Task AddEmployeeAsync(EmployeeInfo employee)
         {
-            var emp = await _iemp.GetEmployeeById(employee.Id);
-            if (emp != null) {
-                throw new Exception($"Employee with ID {employee.Id} already exists.");
+            if (employee.Phone.Length > 10)
+            {
+                throw new ArgumentException("Nigga stop ,de fuck u doing u already know phonenumber must be  10 digit above ,stop it cuz");
             }
+            if (string.IsNullOrWhiteSpace(employee.Phone))
+            {
+                throw new ArgumentException("I ain't see shit nigga ");
+            }
+            var emp = await _iemp.ExistByPhone(employee.Phone);
+            if (emp)
+            {
+                throw new InvalidOperationException($"Already Used This PhoneNumber : {employee.Phone} Cuzz");
+            }
+            
+            
+            
             if(employee.Age < 0 || employee.Age > 150)
             {
                 throw new Exception("Invalid Age");
             }
-            if(employee.Phone.Length != 10 && employee.Phone.Any(c => !char.IsDigit(c)))
+            if(employee.Phone.Length != 10 || employee.Phone.Any(c => !char.IsDigit(c)))
             {
                 throw new Exception("Invalid Phone Number");
             }

@@ -30,6 +30,14 @@ namespace hrmana.HrManagement.API.Controller
             var savetoken = await _auth.LoginAsync(ldto);
             return Ok(BaseResponse<string>.Ok(savetoken, "Login SuccessFully"));
         }
+        [HttpPost("Login-Normal")]
+        
+        public async Task<IActionResult> LoginNormal([FromBody] LoginDTO lndto)
+        {
+            var a = await _auth.LoginNormalAsync(lndto);
+            return Ok(BaseResponse<string>.Ok(a, "Login SuccessFully"));
+        }
+
         [HttpPost("Create-User")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateUserOnRole([FromBody] RegistDTO rdto, string role)

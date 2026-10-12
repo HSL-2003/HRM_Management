@@ -47,7 +47,7 @@ namespace Hrmanagement.HRManagement.Infrastructure.Repository
 
         public async Task<(List<EmployeeInfo> Items, int TotalCount)> SearchEmployeeAsync(string? keyword, int? DepartmentId, int pageNumber, int pageSize)
         {
-            var query = _context.EmployeeInfos.Include(x => x.DepartmentId).Include(x => x.PositionId).AsNoTracking().AsQueryable();
+            var query = _context.EmployeeInfos.Include(x => x.Department).Include(x => x.Position).AsNoTracking().AsQueryable();
             if (!string.IsNullOrWhiteSpace(keyword))
             {
                 query = query.Where(e => e.Name.Contains(keyword));

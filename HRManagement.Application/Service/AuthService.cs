@@ -69,15 +69,33 @@ namespace hrmana.HRManagement.Application.Service
                     throw new ArgumentException("Wrong Password u piece of shit");
                 }
                 var c = await _usermana.IsInRoleAsync(a, "Admin");
-                if (c != true)
+                if (c!= true )
                 {
-                    throw new UnauthorizedAccessException("Not An Admin,De Fuck u doing here cuz");
+                    throw new UnauthorizedAccessException("De Fuck u doing here boy,get your cherub-looking motherfucker out of here");
                 }
             }
             var role = await _usermana.GetRolesAsync(a);
             return GenerateJwtToken(a,role);
 
 
+        }
+        public async Task<string> LoginNormalAsync(LoginDTO lndto)
+        {
+            var checkexistemail = await _usermana.FindByEmailAsync(lndto.Email);
+            if (checkexistemail == null)
+            {
+                throw new KeyNotFoundException("Great Job you ain't be found in database,so get ur bitch ass up out of here");
+            }
+            else
+            {
+                var checkpassword = await _usermana.CheckPasswordAsync(checkexistemail, lndto.Password);
+                if (checkpassword == false)
+                {
+                    throw new UnauthorizedAccessException("Wrong Password cuzz");
+                }
+            }
+            var role = await _usermana.GetRolesAsync(checkexistemail);
+            return GenerateJwtToken(checkexistemail,role);
         }
 
         public async Task CreateUserOnRoleAsync(RegistDTO rdto, string role)
@@ -215,6 +233,8 @@ namespace hrmana.HRManagement.Application.Service
             
 
         }
+
+        
     }
     }
 

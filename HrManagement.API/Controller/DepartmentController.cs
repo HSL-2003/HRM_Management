@@ -3,6 +3,7 @@ using Hrmanage.HRManagement.Application.Service;
 using hrmana.HRManagement.Application.DTOs;
 using Hrmanagement.HRManagement.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace hrmana.HrManagement.API.Controller
 {
@@ -16,6 +17,7 @@ namespace hrmana.HrManagement.API.Controller
             _dpm = dpm;
         }
         [HttpGet]
+        [Authorize(Roles = "Admin,Manager,Viewer")]
         public async Task<IActionResult> GetAllDepartment()
         {
            
@@ -32,6 +34,7 @@ namespace hrmana.HrManagement.API.Controller
             return Ok(BaseResponse<List<DepartmentResponseDTO>>.Ok(d1,"Get All List Success"));
         }
         [HttpGet("{id}")]
+        [Authorize(Roles ="Admin,Manager,Viewer")]
         public async Task<IActionResult> GetDepartmentById(int id)
         {
             var d = await _dpm.GetDepartmentById(id);
@@ -51,6 +54,7 @@ namespace hrmana.HrManagement.API.Controller
             return Ok(BaseResponse<DepartmentResponseDTO>.Ok(dto, "Get User By ID SuccessFully"));
         }
         [HttpPost]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> CreateDepartment([FromBody]CreateDepartmentDTO cdd)
         {
             var dto = new Department
@@ -69,7 +73,8 @@ namespace hrmana.HrManagement.API.Controller
             };
             return Ok(BaseResponse<DepartmentResponseDTO>.Ok(responsedto, "Create New Department SuccessFully"));
         }
-        [HttpPut]
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> UpdateDepartment(int id,[FromBody]UpdateDepartmentDTO dpm)
         {
             var existd = await _dpm.GetDepartmentById(id);
@@ -95,6 +100,7 @@ namespace hrmana.HrManagement.API.Controller
 
         }
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin,Manager")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
             await _dpm.DeleteDepartmentAsync(id);
